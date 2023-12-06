@@ -119,56 +119,6 @@
 	
 </ul>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        #countdown-container {
-            position: relative;
-            width: 100%;
-            height: 2px;
-            background-color: #ccc;
-        }
-
-        #progress-dot {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: blue;
-            border-radius: 50%;
-            top: -9px; /* Adjust this value to center the dot on the line */
-        }
-    </style>
-</head>
-<body>
-    <div id="countdown-container">
-        <div id="progress-dot"></div>
-    </div>
-
-    <script>
-        // Set the conference submission deadline (YYYY-MM-DD format)
-        var conferenceDeadline = new Date('2023-01-01').getTime();
-
-        function updateProgress() {
-            var currentDate = new Date().getTime();
-            var totalTime = conferenceDeadline - currentDate;
-            var elapsedTime = conferenceDeadline - totalTime;
-
-            // Calculate the percentage of time elapsed
-            var progressPercentage = (elapsedTime / conferenceDeadline) * 100;
-
-            // Update the position of the progress dot
-            var progressDot = document.getElementById('progress-dot');
-            progressDot.style.left = progressPercentage + '%';
-        }
-
-        // Update the progress every second
-        setInterval(updateProgress, 1000);
-
-        // Initial call to set the progress on page load
-        updateProgress();
-    </script>
-
 
   
 
